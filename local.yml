@@ -1,8 +1,8 @@
 version: '2'
 
 volumes:
-  postgres_data_local: {}
-  postgres_backup_local: {}
+  postgres_data_local: 
+  postgres_backup_local: 
 
 services:
   django:
@@ -18,7 +18,7 @@ services:
       - ./.envs/.local/.django
       - ./.envs/.local/.postgres
     ports:
-      - "8000:8000"
+      - "8001:8000"
     command: /start.sh
 
   postgres:
